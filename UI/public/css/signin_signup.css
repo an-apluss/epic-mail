@@ -1,0 +1,185 @@
+body {
+  background-color: #fff;
+  background-image: url('../images/bg_signin.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media(min-width: 1200px) {
+  .form-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+@media(min-width: 992px) {
+  .form-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media(min-width: 768px) {
+  .button-container > span{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66666667%;
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%;
+  }
+
+  .form-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .input-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media(min-width: 576px) {
+  .form-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .label-width {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%;
+  }
+}
+
+@media(max-width: 576px) {
+  .input-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .label-width {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(256, 256, 256, .9);
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .9rem;
+}
+
+.card-box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 3px 0px; 
+}
+
+.card-head {
+  padding: .75rem 1.25rem;
+  padding-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.logo-container { 
+	padding-top: 40px;
+	margin-bottom: -30px;
+}
+
+.logo-height { 
+	height: 50px;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 2.75rem;
+}
+
+.field-container {
+  margin-bottom: 1rem;
+}
+
+.col-form-label {
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  margin-bottom: 0;
+}
+
+.input-control {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  color: #616468;
+  background-color: transparent;
+  background-clip: padding-box;
+}
+
+.remode-border {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #a3abb4;
+  background-color: transparent;
+  -webkit-transition: border-bottom .9s;
+  transition: border-bottom .9s;
+}
+
+.remode-border:hover, .remode-border:focus {
+  border-bottom: 2px solid #f2a358;
+}
+
+.button-container {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 83.33333333%;
+  flex: 0 0 83.33333333%;
+  max-width: 83.33333333%;
+}
+
+.reset-password {
+  color: #f08f2f;
+  -webkit-transition: color .9s, border .9s;
+  transition: color .9s, border .9s;
+}
+
+.reset-password:hover, .reset-password:focus {
+  color: #5700af;
+}
+
+.form-container, .label-width, .input-container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
