@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="public/images/logo.png">
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="stylesheet" href="public/css/admin_user.css">
+  <title>User | EPIC</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">
+      <img src="public/images/nav_logo.png" alt="company logo" class="nav-image">
+    </div>
+    <div class="wrapper float-right">
+      <div class="nav-form float-right">
+        <button>Logout</button>
+      </div>
+      <div class="profile-image">
+        <img src="public/images/profile_pic.jpg" alt="profile picture" class="">
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab-1">Create Message</a></li>
+      <li><a href="#tab-2">Inbox<span class="inbox-count">3</span></a></li>
+      <li><a href="#tab-3">Draft<span class="inbox-count">3</span></a></li>
+      <li><a href="#tab-4">Sent</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="tab-1" class="tab-pane active">
+	      	<div  class="margin-l text-center">
+            <h3 class="color-white">Compose Message</h3>
+	      		<div class="tab-form-container">
+			        <form id="mailform" action="" method="post">
+                <fieldset>
+                  <label class="float-left mb" for="recipient">Recipient</label>
+                  <input id="recipient" name="recipient" type="email" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                  <label class="float-left mb" for="title">Title</label>
+                  <input id="title" name="title" type="text" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                  <label class="float-left mb" for="message">Message</label>
+                  <textarea id="message" name="message" tabindex="3" required></textarea>
+                </fieldset>
+                <fieldset >
+                  <div class="float-right">
+                    <button class="mr-2" name="draft" id="draft">Draft</button>
+                    <button  name="send" id="send">Send</button>
+                  </div>
+                </fieldset>
+              </form>
+		       </div>
+		      </div>
+      </div>
+      <div id="tab-2" class="tab-pane">
+        <!-- adjust here -->
+        <h3 class="color-white text-center">Inbox</h3>
+      	<div class="tab-wrapper-flex">
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <div id="tab-3" class="tab-pane">
+      	<!-- <div  class="text-center">
+        	<h3 class="color-white">Draft Message</h3>
+        </div> adjust here -->
+        <h3 class="color-white text-center">Draft Message</h3>
+        <div class="tab-wrapper-flex">
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <div id="tab-4" class="tab-pane">
+      	<!-- <div class="margin-r text-center">
+        	<h3 class="color-white">Sent</h3>
+        </div> -->
+        <h3 class="color-white text-center">Sent Message</h3>
+        <div class="tab-wrapper-flex">
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+          <div class="content-item-wrapper">
+            <span class="content-item">Sender</span>
+            <span class="content-item">Message</span>
+            <span class="content-item">Date</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+	    <div class="modal-content">
+        <div class="close-button-wrapper">
+          <span class="close-button">×</span>
+        </div>
+        <h1>Hello, I am a modal!</h1>
+	    </div>
+	  </div>
+  <script type="text/javascript" src="public/js/script.js"></script>
+</body>
+</html>
