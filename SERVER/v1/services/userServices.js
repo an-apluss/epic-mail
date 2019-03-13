@@ -22,7 +22,7 @@ class UserService {
   static createUser(userData) {
     const existingUsers = this.users;
     const emailExist = existingUsers.find(user => user.email === userData.email);
-    if (emailExist) return 'Email already exist';
+    if (emailExist) return false;
 
     const lastUserId = existingUsers[existingUsers.length - 1].id;
     const newUser = { id: lastUserId + 1, ...userData };
@@ -32,11 +32,11 @@ class UserService {
 
   static loginUser(loginData) {
     const emailExist = this.users.find(user => user.email === loginData.email);
-    if (!emailExist) return 'Unknown user';
+    if (!emailExist) return false;
     return emailExist;
   }
 
-  static getUserByEmail(email) {
+  getUserByEmail(email) {
     const emailExist = this.users.find(user => user.email === email);
     if (!emailExist) return false;
     return emailExist;

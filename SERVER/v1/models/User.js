@@ -5,6 +5,7 @@ class User {
     this.firstname = null;
     this.lastname = null;
     this.password = null;
+    this.phone = null;
   }
 }
 
