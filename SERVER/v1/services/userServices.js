@@ -1,12 +1,9 @@
 /* eslint-disable class-methods-use-this */
+import bcrypt from 'bcrypt';
 import User from '../models/User';
 import dummydata from '../datastore/dummydata';
 
 class UserService {
-  constructor() {
-    this.users = dummydata.users;
-  }
-
   static getAllUsers() {
     return this.users.map((userData) => {
       const user = new User();
@@ -20,24 +17,28 @@ class UserService {
   }
 
   static createUser(userData) {
-    const existingUsers = this.users;
+    const existingUsers = dummydata.users;
     const emailExist = existingUsers.find(user => user.email === userData.email);
     if (emailExist) return false;
 
     const lastUserId = existingUsers[existingUsers.length - 1].id;
-    const newUser = { id: lastUserId + 1, ...userData };
-    existingUsers.push(newUser);
-    return newUser;
+    // eslint-disable-next-line no-param-reassign
+    userData.id = lastUserId + 1;
+    existingUsers.push(userData);
+    return userData;
   }
 
   static loginUser(loginData) {
-    const emailExist = this.users.find(user => user.email === loginData.email);
-    if (!emailExist) return false;
-    return emailExist;
+    const userExist = dummydata.users.find(user => user.email === loginData.email);
+    if (!userExist) return 'exist';
+    if (bcrypt.compareSync(loginData.password, userExist.password)) {
+      return userExist;
+    }
+    return false;
   }
 
-  getUserByEmail(email) {
-    const emailExist = this.users.find(user => user.email === email);
+  static getUserByEmail(email) {
+    const emailExist = dummydata.users.find(user => user.email === email);
     if (!emailExist) return false;
     return emailExist;
   }

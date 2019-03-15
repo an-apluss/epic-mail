@@ -1,3 +1,4 @@
+// password is 1234567
 const dummydata = {
   users: [
     {
@@ -5,7 +6,7 @@ const dummydata = {
       email: 'lola@epicmail.com',
       firstname: 'Lola',
       lastname: 'Akinde',
-      password: '1234567',
+      password: '$2b$10$K/yzEbALC3cMTHIMZ71TBuqqeJfdwDKJxwHiCtD..0Esxh0v8Ubqm',
       phone: '08034326622',
     },
     {
@@ -13,7 +14,7 @@ const dummydata = {
       email: 'anuoluwapoakinseye@epicmail.com',
       firstname: 'Anuoluwapo',
       lastname: 'Akinseye',
-      password: '1234567',
+      password: '$2b$10$K/yzEbALC3cMTHIMZ71TBuqqeJfdwDKJxwHiCtD..0Esxh0v8Ubqm',
       phone: '08034326603',
     },
   ],
